@@ -5,6 +5,9 @@ $button.on('click', () => {
     let pokemon = $userInput.val().toLowerCase()
     $.ajax(`https://pokeapi.co/api/v2/pokemon/${pokemon}/`).then((data) => {
         console.log(data)
+        const $pokemonName = ("<h2 id='pokemon-name'>")
+        $('#pokemon-name').text(data.name)
+        $($pokemonName).appendTo('#search-results')
         // const $pokemonPic = ('<img id="pokemon-picture">')
         // $pokemonPic.attr('src', data.sprites.other.official-artwork.front_default)
         // $pokemonPic.appendTo('#serch-results')
@@ -14,7 +17,7 @@ $button.on('click', () => {
         for (let type of data.types) {
             pokemonType = type.type.name
         }
-
+        
         console.log(pokemonType)
         // $.ajax(`https://pokeapi.co/api/v2/type/normal/`)
     }) 
