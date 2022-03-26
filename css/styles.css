@@ -1,0 +1,22 @@
+main {
+ display: flex;
+ flex-direction: row;
+}
+
+.main-columns{
+   
+    height: 500px;
+    width: 100%;
+}
+
+.main-columns.one{
+    background-color: red;
+    }
+
+.main-columns.two{
+    background-color: blue;
+    }
+
+.main-columns.three {
+    background-color: yellow;
+}
