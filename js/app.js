@@ -2,10 +2,19 @@ const $userInput = $('input')
 const $button = $('#get-results')
 
 $button.on('click', () => {
-    let test = $userInput.val()
-    test = test.toLowerCase()
-    $.ajax(`https://pokeapi.co/api/v2/pokemon/${test}/`).then((data) => {
+    let pokemon = $userInput.val().toLowerCase()
+    $.ajax(`https://pokeapi.co/api/v2/pokemon/${pokemon}/`).then((data) => {
         console.log(data)
+        // const $pokemonPic = ('<img id="pokemon-picture">')
+        // $pokemonPic.attr('src', data.sprites.other.official-artwork.front_default)
+        // $pokemonPic.appendTo('#serch-results')
+
+        // const pokemonType = ;
+        
+        for (let type of data.types) {
+            console.log(type.type.name)
+        }
+        $.ajax(`https://pokeapi.co/api/v2/type/normal/`)
     }) 
 })
 
@@ -18,7 +27,7 @@ $button.on('click', () => {
 //for Pokemon search
 //name - data.name
 //type - (for loops) data.types[i].type.name
-//picture - data.sprites.official-artwork.front_default
+//picture - data.sprites.other.official-artwork.front_default
 
 //for Type search
 //name - data.name
