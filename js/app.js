@@ -9,12 +9,14 @@ $button.on('click', () => {
         // $pokemonPic.attr('src', data.sprites.other.official-artwork.front_default)
         // $pokemonPic.appendTo('#serch-results')
 
-        // const pokemonType = ;
-        
+        let pokemonType = null;
+
         for (let type of data.types) {
-            console.log(type.type.name)
+            pokemonType = type.type.name
         }
-        $.ajax(`https://pokeapi.co/api/v2/type/normal/`)
+
+        console.log(pokemonType)
+        // $.ajax(`https://pokeapi.co/api/v2/type/normal/`)
     }) 
 })
 
