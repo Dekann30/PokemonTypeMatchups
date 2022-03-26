@@ -5,7 +5,7 @@ main {
 
 .main-columns{
    
-    height: 500px;
+    height: 550px;
     width: 100%;
 }
 
@@ -19,4 +19,37 @@ main {
 
 .main-columns.three {
     background-color: yellow;
+}
+
+#searchbox-and-button{
+    border-style: solid;
+}
+
+#search-results{
+    border-style: solid;
+    width: 350px;
+    height: 200px;
+    margin: auto;
+}
+
+.subtitles {
+    height: 30px;
+    border-style: solid;
+}
+
+.boxes {
+    height: 250px;
+    border-style: solid;
+}
+
+.sub-subtitles{
+    border-style: solid;
+    height: 30px;
+}
+
+.list-boxes{
+    border-style: solid;
+    width: 350px;
+    height: 200px;
+    margin: auto;
 }
