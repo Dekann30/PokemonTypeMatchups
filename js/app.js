@@ -25,7 +25,22 @@ $button.on('click', () => {
             $('#search-results').children().remove()})
 
         console.log(pokemonType)
-        $.ajax(`https://pokeapi.co/api/v2/type/normal/`)
+
+        if (pokemonType.length === 1){
+            $.ajax(`https://pokeapi.co/api/v2/type/${pokemonType[0]}/`).then((data2) => {
+                console.log(data2)
+            })
+
+        } else {
+             $.ajax(`https://pokeapi.co/api/v2/type/${pokemonType[0]}/`).then((data2) => {
+            console.log(data2)
+            })
+
+            $.ajax(`https://pokeapi.co/api/v2/type/${pokemonType[1]}/`).then((data3) => {
+                console.log(data3)
+            })
+        }
+
     }) 
 })
 
@@ -38,7 +53,7 @@ $button.on('click', () => {
 //for Pokemon search
 //name - data.name
 //type - (for loops) data.types[i].type.name
-//picture - data.sprites.other.official-artwork.front_default
+//picture - data.sprites.other[official-artwork].front_default
 
 //for Type search
 //name - data.name
