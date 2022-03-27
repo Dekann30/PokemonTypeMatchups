@@ -53,3 +53,7 @@ main {
     height: 200px;
     margin: auto;
 }
+
+#pokemon-picture{
+    height: 150px;
+}

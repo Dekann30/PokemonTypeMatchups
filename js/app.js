@@ -4,22 +4,28 @@ const $button = $('#get-results')
 $button.on('click', () => {
     let pokemon = $userInput.val().toLowerCase()
     $.ajax(`https://pokeapi.co/api/v2/pokemon/${pokemon}/`).then((data) => {
-        console.log(data)
-        const $pokemonName = ("<h2 id='pokemon-name'>")
-        $('#pokemon-name').text(data.name)
-        $($pokemonName).appendTo('#search-results')
-        // const $pokemonPic = ('<img id="pokemon-picture">')
-        // $pokemonPic.attr('src', data.sprites.other.official-artwork.front_default)
-        // $pokemonPic.appendTo('#serch-results')
+        console.log()
+        const $pokemonName = $(`<h2 id='pokemon-name'>${$userInput.val()}</h2>`)
+        $pokemonName.appendTo('#search-results')
 
-        let pokemonType = null;
+        const $pokemonPic = $('<img id="pokemon-picture">')
+        $pokemonPic.attr('src', data.sprites.other['official-artwork'].front_default)
+        $pokemonPic.appendTo('#search-results')
+
+        let pokemonType = [];
 
         for (let type of data.types) {
-            pokemonType = type.type.name
+            pokemonType.push(type.type.name)
         }
-        
+
+        const $pokemonType = $(`<h3 id='pokemon-type'> Type: ${pokemonType.join(' and ')}</h3>`)
+        $($pokemonType).appendTo('#search-results')
+
+        $button.on('click', () => {
+            $('#search-results').children().remove()})
+
         console.log(pokemonType)
-        // $.ajax(`https://pokeapi.co/api/v2/type/normal/`)
+        $.ajax(`https://pokeapi.co/api/v2/type/normal/`)
     }) 
 })
 
