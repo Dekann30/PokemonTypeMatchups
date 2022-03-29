@@ -123,11 +123,24 @@ input {
 }
 
 .list-boxes{
-    border-style: solid;
-    width: 200px;
+    /* border-style: solid; */
+    width: 250px;
     height: 150px;
     margin: auto;
     margin-top: 15px;
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: top;
+    align-items: center;
+    padding: 0px;
+    /* background-color: #ffffff; */
+    /* opacity: 0.6; */
+}
+
+.type-icon {
+    width: 120px;
 }
 
 .placeholder-pics{

@@ -2,6 +2,9 @@ const $userInput = $('input')
 const $button = $('#get-results')
 
 $button.on('click', () => {
+    $('#sbone').text('Strengths')
+    $('#sbtwo').text('Weaknesses')
+
     let pokemonOrType = $userInput.val().toLowerCase()
     $.ajax(`https://pokeapi.co/api/v2/pokemon/${pokemonOrType}/`).then((data) => {
         const $pokemonName = $(`<h2 id='pokemon-name'>${$userInput.val()}</h2>`)
@@ -74,6 +77,8 @@ $button.on('click', () => {
     })
 
     function doubleDamageTo(info){
+            $('.ssone').text('Double Damage To:')
+
             let dDT = []
                 for (let types of info.damage_relations.double_damage_to) {
                     dDT.push(types.name)
@@ -92,6 +97,8 @@ $button.on('click', () => {
         }
 
     function noDamageFrom(info){
+            $('.ssthree').text('No Damage From:')
+
              let nDF = []
                 for (let types of info.damage_relations.no_damage_from) {
                     nDF.push(types.name)
@@ -110,6 +117,8 @@ $button.on('click', () => {
         }
 
         function halfDamageFrom(info){
+            $('.ssfive').text('Half Damage From:')
+
              let hDF = []
                 for (let types of info.damage_relations.half_damage_from) {
                     hDF.push(types.name)
@@ -128,6 +137,8 @@ $button.on('click', () => {
         }
 
         function doubleDamageFrom(info){
+            $('.sstwo').text('Double Damage From:')
+
              let dDF = []
                 for (let types of info.damage_relations.double_damage_from) {
                     dDF.push(types.name)
@@ -146,13 +157,15 @@ $button.on('click', () => {
         }
 
         function noDamageTo(info){
+            $('.ssfour').text('No Damage To:')
+
              let nDT = []
                 for (let types of info.damage_relations.no_damage_to) {
                     nDT.push(types.name)
                 }
                 if (nDT.length > 0){
                     nDT.forEach((name) => {
-                        const $list = $('<li class="ndtl">')
+                        const $list = $('<li class="ndtl lists">')
                         $list.html(`<img class='type-icon' src='../images/wordIcons/${name}.png'>`)
                         $list.appendTo('#list-ndt')
                     })
@@ -164,13 +177,15 @@ $button.on('click', () => {
         }
 
         function halfDamageTo(info){
+            $('.sssix').text('Half Damage To:')
+
              let hDT = []
                 for (let types of info.damage_relations.half_damage_to) {
                     hDT.push(types.name)
                 }
                 if (hDT.length > 0){
                     hDT.forEach((name) => {
-                        const $list = $('<li class="hdtl">')
+                        const $list = $('<li class="hdtl lists">')
                         $list.html(`<img class='type-icon' src='../images/wordIcons/${name}.png'>`)
                         $list.appendTo('#list-hdt')
                     })
