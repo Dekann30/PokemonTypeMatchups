@@ -18,7 +18,7 @@ $button.on('click', () => {
         }
 
         pokemonType.forEach((typeName) => {
-            $pokemonType = $(`<img class='type-icon' id='pokemon-results-icon' src='../images/wordIcons/${typeName}.webp'>`)
+            $pokemonType = $(`<img class='type-icon' id='pokemon-results-icon' src='../images/wordIcons/${typeName}.png'>`)
             $($pokemonType).appendTo('#search-results')
         })
 
@@ -59,7 +59,7 @@ $button.on('click', () => {
     })
     
     $.ajax(`https://pokeapi.co/api/v2/type/${pokemonOrType}/`).then((data4) => {
-        const $typeName = $(`<img class='type-icon' id='pokemon-results-icon' src='../images/wordIcons/${pokemonOrType}.webp'>`)
+        const $typeName = $(`<img class='type-icon' id='pokemon-results-icon' src='../images/wordIcons/${pokemonOrType}.png'>`)
     $typeName.appendTo('#search-results')
 
     $button.on('click', () => {
@@ -81,7 +81,7 @@ $button.on('click', () => {
                 if (dDT.length > 0){
                     dDT.forEach((name) => {
                         const $list = $('<li class="ddtl">')
-                        $list.html(`<img class='type-icon' src='../images/wordIcons/${name}.webp'>`)
+                        $list.html(`<img class='type-icon' src='../images/wordIcons/${name}.png'>`)
                         $list.appendTo('#list-ddt')
                     })
                 }else{
@@ -99,7 +99,7 @@ $button.on('click', () => {
                 if (nDF.length > 0){
                     nDF.forEach((name) => {
                         const $list = $('<li class="ndfl">')
-                        $list.html(`<img class='type-icon' src='../images/wordIcons/${name}.webp'>`)
+                        $list.html(`<img class='type-icon' src='../images/wordIcons/${name}.png'>`)
                         $list.appendTo('#list-ndf')
                     })
                 }else{
@@ -117,7 +117,7 @@ $button.on('click', () => {
                 if (hDF.length > 0){
                     hDF.forEach((name) => {
                         const $list = $('<li class="hdfl">')
-                        $list.html(`<img class='type-icon' src='../images/wordIcons/${name}.webp'>`)
+                        $list.html(`<img class='type-icon' src='../images/wordIcons/${name}.png'>`)
                         $list.appendTo('#list-hdf')
                     })
                 }else{
@@ -135,7 +135,7 @@ $button.on('click', () => {
                 if (dDF.length > 0){
                     dDF.forEach((name) => {
                         const $list = $('<li class="ddfl">')
-                        $list.html(`<img class='type-icon' src='../images/wordIcons/${name}.webp'>`)
+                        $list.html(`<img class='type-icon' src='../images/wordIcons/${name}.png'>`)
                         $list.appendTo('#list-ddf')
                     })
                 }else{
@@ -153,7 +153,7 @@ $button.on('click', () => {
                 if (nDT.length > 0){
                     nDT.forEach((name) => {
                         const $list = $('<li class="ndtl">')
-                        $list.html(`<img class='type-icon' src='../images/wordIcons/${name}.webp'>`)
+                        $list.html(`<img class='type-icon' src='../images/wordIcons/${name}.png'>`)
                         $list.appendTo('#list-ndt')
                     })
                 }else{
@@ -171,7 +171,7 @@ $button.on('click', () => {
                 if (hDT.length > 0){
                     hDT.forEach((name) => {
                         const $list = $('<li class="hdtl">')
-                        $list.html(`<img class='type-icon' src='../images/wordIcons/${name}.webp'>`)
+                        $list.html(`<img class='type-icon' src='../images/wordIcons/${name}.png'>`)
                         $list.appendTo('#list-hdt')
                     })
                 }else{

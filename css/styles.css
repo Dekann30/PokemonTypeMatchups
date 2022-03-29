@@ -45,9 +45,8 @@ main {
     flex-direction: column;
     justify-content: center;
     align-content: center;
-    margin-top: 45px;
     width: 330px;
-    height: 350px;
+    height: 465px;
 }
 
 #searchbox-and-button{
@@ -81,7 +80,7 @@ input {
 }
 
 #pokemon-results-icon.type-icon{
-    height: 16px;
+    height: 32px;
 }
 
 .subtitles {
