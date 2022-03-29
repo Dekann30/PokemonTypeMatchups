@@ -36,23 +36,24 @@ main {
     width: 330px;
 }
 
-.main-columns.one {
-    
-    }
-
-#test-icons{
-    width: 50px;
-    height: 50px;
-}
-
 .main-columns.two, .main-columns.three, .main-columns.four{
     width: 300px;
     }
 
+#search-and-results.boxes{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    margin-top: 45px;
+    width: 330px;
+    height: 350px;
+}
+
 #searchbox-and-button{
-    border-style: solid;
     display: flex;
     justify-content: center;
+    height: 30px;
 }
 input {
     border-style: solid;
@@ -60,31 +61,46 @@ input {
 }
 #get-results{
     margin-left: 15px;
+    background-color: white;
+    border-style: solid;
+    border-color: red;
 }
 
-#search-results.boxes{
+#search-results{
     border-style: solid;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     height: inherit;
-    margin: 30px;
+    margin: 10px;
+}
+
+#pokemon-picture{
+    height: 220px;
+}
+
+#pokemon-results-icon.type-icon{
+    height: 16px;
 }
 
 .subtitles {
     height: 460px;
     width: 30px;
-    border-style: solid;
 }
 
 .subboxes {
     height: 225px;
-    border-style: solid;
     writing-mode: vertical-rl;
     transform: rotate(180deg);
     width: 25px;
- 
+    text-align: center;
+    font-family: fantasy;
+    margin-left: 2px;
+    font-size: x-large;
+    color: white;
+    letter-spacing: 5px;
+    text-shadow: 4px 4px blue;
 }
 
 .boxes {
@@ -103,10 +119,6 @@ input {
     height: 150px;
     margin: auto;
     margin-top: 15px;
-}
-
-#pokemon-picture{
-    height: 150px;
 }
 
 .placeholder-pics{
