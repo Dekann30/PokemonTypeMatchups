@@ -29,6 +29,7 @@ $button.on('click', () => {
             $.ajax(`https://pokeapi.co/api/v2/type/${pokemonType}/`).then((data2) => {
                 console.log(data2)
                 doubleDamageTo(data2)
+                noDamageFrom(data2)
             })
 
         } else {
@@ -53,6 +54,31 @@ $button.on('click', () => {
                     $list.appendTo('#list-ddt')
                     console.log(name)
                 })
+                $button.on('click', () => {
+            $('#list-ddt').children().remove()})
+        }
+
+        function noDamageFrom(info){
+             let nDF = []
+                for (let types of info.damage_relations.no_damage_from) {
+                    nDF.push(types.name)
+                }
+                console.log(nDF)
+                if (nDF.length > 0){
+                    nDF.forEach((name) => {
+                        const $list = $('<li class="ndfl">')
+                        $list.text(name)
+                        $list.appendTo('#list-ndf')
+                        console.log(name)
+                    })
+                } else{
+                    console.log(`Theres nothing here`)
+                    $('#list-ndf').html('<img class="placeholder-pics" src="../images/pokeball2.png">')
+                }
+
+                
+                $button.on('click', () => {
+            $('#list-ndf').children().remove()})
         }
 
     }) 
