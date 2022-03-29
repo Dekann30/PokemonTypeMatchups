@@ -27,8 +27,17 @@ $button.on('click', () => {
         console.log(pokemonType)
 
         if (pokemonType.length === 1){
-            $.ajax(`https://pokeapi.co/api/v2/type/${pokemonType[0]}/`).then((data2) => {
+            $.ajax(`https://pokeapi.co/api/v2/type/${pokemonType}/`).then((data2) => {
                 console.log(data2)
+                // let strongAgainst = data2.damage_relations.double_damage_to[0].name
+                // console.log(strongAgainst)
+
+                // let SA = []
+                // for (let test of data2.damage_relations.double_damage_to) {
+                //     SA.push(test.name)
+                // }
+                // console.log(SA)
+                doubleDamageTo(data2)
             })
 
         } else {
@@ -39,6 +48,21 @@ $button.on('click', () => {
             $.ajax(`https://pokeapi.co/api/v2/type/${pokemonType[1]}/`).then((data3) => {
                 console.log(data3)
             })
+        }
+        
+        function doubleDamageTo(info){
+            let dDT = []
+                for (let types of info.damage_relations.double_damage_to) {
+                    dDT.push(types.name)
+                }
+                console.log(dDT)
+                dDT.forEach((name) => {
+                    const $list = $('<li class="ddtl">')
+                    $list.text(name)
+                    $list.appendTo('#list-SA')
+                    console.log(name)
+                })
+                // $('#strong-against').text(dDT)
         }
 
     }) 
