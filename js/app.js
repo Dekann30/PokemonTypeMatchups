@@ -69,6 +69,9 @@ $button.on('click', () => {
             noDamageTo(data4)
             halfDamageTo(data4)
         })
+
+        $('#test-icons').html(`<img class='ti' src='../images/${pokemonOrType}.webp'>`)
+        console.log(pokemonOrType)
     }) 
 
     function doubleDamageTo(info){

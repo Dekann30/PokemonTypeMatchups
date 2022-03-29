@@ -1,6 +1,29 @@
 body{
     background-image: url(../images/bodybackground.jpg);
     background-size: 1100px 750px;
+    margin-left: 40px;
+    margin-top: 20px;
+}
+
+header{
+    background-image: url(../images/banner2.jpg);
+    background-repeat: no-repeat;
+    background-size: 1266px 155px;
+    display: flex;
+    justify-content: center;
+    resize: none;
+    color: white;
+    font-style: oblique;
+    font-family: fantasy;
+    word-spacing: 30px;
+    letter-spacing: 10px;
+    text-shadow: 4px 4px black;
+}
+
+h1 {
+    border: 0px;
+    margin: 13px;
+    font-size: 45px;
 }
 
 main {
@@ -16,6 +39,11 @@ main {
 .main-columns.one {
     
     }
+
+#test-icons{
+    width: 50px;
+    height: 50px;
+}
 
 .main-columns.two, .main-columns.three, .main-columns.four{
     width: 300px;
