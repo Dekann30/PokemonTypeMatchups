@@ -22,8 +22,14 @@ main {
     border-style: solid;
 }
 
-#search-results{
+#search-results.boxes{
     border-style: solid;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: inherit;
+    margin: 30px;
 }
 
 .subtitles {
