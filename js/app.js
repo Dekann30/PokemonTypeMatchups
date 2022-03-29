@@ -48,12 +48,17 @@ $button.on('click', () => {
                     dDT.push(types.name)
                 }
                 console.log(dDT)
-                dDT.forEach((name) => {
-                    const $list = $('<li class="ddtl">')
-                    $list.text(name)
-                    $list.appendTo('#list-ddt')
-                    console.log(name)
-                })
+                if (dDT.length > 0){
+                    dDT.forEach((name) => {
+                        const $list = $('<li class="ddtl">')
+                        $list.text(name)
+                        $list.appendTo('#list-ddt')
+                        console.log(name)
+                    })
+                }else{
+                    console.log(`Theres nothing here`)
+                    $('#list-ndf').html('<img class="placeholder-pics" src="../images/pokeball2.png">')
+                }
                 $button.on('click', () => {
             $('#list-ddt').children().remove()})
         }
@@ -71,12 +76,10 @@ $button.on('click', () => {
                         $list.appendTo('#list-ndf')
                         console.log(name)
                     })
-                } else{
+                }else{
                     console.log(`Theres nothing here`)
                     $('#list-ndf').html('<img class="placeholder-pics" src="../images/pokeball2.png">')
                 }
-
-                
                 $button.on('click', () => {
             $('#list-ndf').children().remove()})
         }
