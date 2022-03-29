@@ -23,11 +23,9 @@ $button.on('click', () => {
         $button.on('click', () => {
             $('#search-results').children().remove()})
 
-        console.log(pokemonType)
 
         if (pokemonType.length === 1){
             $.ajax(`https://pokeapi.co/api/v2/type/${pokemonType}/`).then((data2) => {
-                console.log(data2)
                 doubleDamageTo(data2)
                 noDamageFrom(data2)
                 halfDamageFrom(data2)
@@ -38,11 +36,21 @@ $button.on('click', () => {
 
         } else {
              $.ajax(`https://pokeapi.co/api/v2/type/${pokemonType[0]}/`).then((data2) => {
-            console.log(data2)
+                doubleDamageTo(data2)
+                noDamageFrom(data2)
+                halfDamageFrom(data2)
+                doubleDamageFrom(data2)
+                noDamageTo(data2)
+                halfDamageTo(data2)
             })
 
             $.ajax(`https://pokeapi.co/api/v2/type/${pokemonType[1]}/`).then((data3) => {
-                console.log(data3)
+                doubleDamageTo(data3)
+                noDamageFrom(data3)
+                halfDamageFrom(data3)
+                doubleDamageFrom(data3)
+                noDamageTo(data3)
+                halfDamageTo(data3)
             })
         }
         
@@ -51,16 +59,13 @@ $button.on('click', () => {
                 for (let types of info.damage_relations.double_damage_to) {
                     dDT.push(types.name)
                 }
-                console.log(dDT)
                 if (dDT.length > 0){
                     dDT.forEach((name) => {
                         const $list = $('<li class="ddtl">')
                         $list.text(name)
                         $list.appendTo('#list-ddt')
-                        console.log(name)
                     })
                 }else{
-                    console.log(`Theres nothing here`)
                     $('#list-ndf').html('<img class="placeholder-pics" src="../images/pokeball2.png">')
                 }
                 $button.on('click', () => {
@@ -72,16 +77,13 @@ $button.on('click', () => {
                 for (let types of info.damage_relations.no_damage_from) {
                     nDF.push(types.name)
                 }
-                console.log(nDF)
                 if (nDF.length > 0){
                     nDF.forEach((name) => {
                         const $list = $('<li class="ndfl">')
                         $list.text(name)
                         $list.appendTo('#list-ndf')
-                        console.log(name)
                     })
                 }else{
-                    console.log(`Theres nothing here`)
                     $('#list-ndf').html('<img class="placeholder-pics" src="../images/pokeball2.png">')
                 }
                 $button.on('click', () => {
@@ -93,16 +95,13 @@ $button.on('click', () => {
                 for (let types of info.damage_relations.half_damage_from) {
                     hDF.push(types.name)
                 }
-                console.log(hDF)
                 if (hDF.length > 0){
                     hDF.forEach((name) => {
                         const $list = $('<li class="hdfl">')
                         $list.text(name)
                         $list.appendTo('#list-hdf')
-                        console.log(name)
                     })
                 }else{
-                    console.log(`Theres nothing here`)
                     $('#list-hdf').html('<img class="placeholder-pics" src="../images/pokeball2.png">')
                 }
                 $button.on('click', () => {
@@ -114,16 +113,13 @@ $button.on('click', () => {
                 for (let types of info.damage_relations.double_damage_from) {
                     dDF.push(types.name)
                 }
-                console.log(dDF)
                 if (dDF.length > 0){
                     dDF.forEach((name) => {
                         const $list = $('<li class="ddfl">')
                         $list.text(name)
                         $list.appendTo('#list-ddf')
-                        console.log(name)
                     })
                 }else{
-                    console.log(`Theres nothing here`)
                     $('#list-ddf').html('<img class="placeholder-pics" src="../images/pokeball2.png">')
                 }
                 $button.on('click', () => {
@@ -135,16 +131,13 @@ $button.on('click', () => {
                 for (let types of info.damage_relations.no_damage_to) {
                     nDT.push(types.name)
                 }
-                console.log(nDT)
                 if (nDT.length > 0){
                     nDT.forEach((name) => {
                         const $list = $('<li class="ndtl">')
                         $list.text(name)
                         $list.appendTo('#list-ndt')
-                        console.log(name)
                     })
                 }else{
-                    console.log(`Theres nothing here`)
                     $('#list-ndt').html('<img class="placeholder-pics" src="../images/pokeball2.png">')
                 }
                 $button.on('click', () => {
@@ -156,16 +149,13 @@ $button.on('click', () => {
                 for (let types of info.damage_relations.half_damage_to) {
                     hDT.push(types.name)
                 }
-                console.log(hDT)
                 if (hDT.length > 0){
                     hDT.forEach((name) => {
                         const $list = $('<li class="hdtl">')
                         $list.text(name)
                         $list.appendTo('#list-hdt')
-                        console.log(name)
                     })
                 }else{
-                    console.log(`Theres nothing here`)
                     $('#list-hdt').html('<img class="placeholder-pics" src="../images/pokeball2.png">')
                 }
                 $button.on('click', () => {
