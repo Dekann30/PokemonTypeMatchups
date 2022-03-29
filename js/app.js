@@ -70,7 +70,7 @@ $button.on('click', () => {
             halfDamageTo(data4)
         })
 
-        $('#test-icons').html(`<img class='ti' src='../images/${pokemonOrType}.webp'>`)
+        $('#test-icons').html(`<img class='ti' src='../images/wordIcons/${pokemonOrType}.webp'>`)
         console.log(pokemonOrType)
     }) 
 
