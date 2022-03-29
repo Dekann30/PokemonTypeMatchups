@@ -179,23 +179,3 @@ $button.on('click', () => {
             $('#list-hdt').children().remove()})
         }
 })
-
-//need a for of loop to iterate over data.types
-
-//run types api in .catch
-
-//find and comment the object paths
-
-//for Pokemon search
-//name - data.name
-//type - (for loops) data.types[i].type.name
-//picture - data.sprites.other[official-artwork].front_default
-
-//for Type search
-//name - data.name
-//double damage from - data.damage_relations.double_damaage_from[i].name
-//double damage to - data.damage_relations.double_damage_to[i].name
-//half damage from - data.damage_relations.half_damage_from[i].name
-//half damage to - data.damage_relations.half_damage_to[i].name
-//no damage from - data.damage_relations.no_damage_from[i].name
-//no damage to - data.damage_relations.half_damage_from[i].name

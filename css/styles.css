@@ -1,25 +1,37 @@
+body{
+    background-image: url(../images/bodybackground.jpg);
+    background-size: 1100px 750px;
+}
+
 main {
  display: flex;
  flex-direction: row;
 }
 
 .main-columns{
-   
     height: 465px;
     width: 330px;
 }
 
 .main-columns.one {
-    background-color: red;
+    
     }
 
 .main-columns.two, .main-columns.three, .main-columns.four{
-    background-color: blue;
     width: 300px;
     }
 
 #searchbox-and-button{
     border-style: solid;
+    display: flex;
+    justify-content: center;
+}
+input {
+    border-style: solid;
+    border-color: red;
+}
+#get-results{
+    margin-left: 15px;
 }
 
 #search-results.boxes{
