@@ -30,6 +30,10 @@ $button.on('click', () => {
                 console.log(data2)
                 doubleDamageTo(data2)
                 noDamageFrom(data2)
+                halfDamageFrom(data2)
+                doubleDamageFrom(data2)
+                noDamageTo(data2)
+                halfDamageTo(data2)
             })
 
         } else {
@@ -84,6 +88,89 @@ $button.on('click', () => {
             $('#list-ndf').children().remove()})
         }
 
+        function halfDamageFrom(info){
+             let hDF = []
+                for (let types of info.damage_relations.half_damage_from) {
+                    hDF.push(types.name)
+                }
+                console.log(hDF)
+                if (hDF.length > 0){
+                    hDF.forEach((name) => {
+                        const $list = $('<li class="hdfl">')
+                        $list.text(name)
+                        $list.appendTo('#list-hdf')
+                        console.log(name)
+                    })
+                }else{
+                    console.log(`Theres nothing here`)
+                    $('#list-hdf').html('<img class="placeholder-pics" src="../images/pokeball2.png">')
+                }
+                $button.on('click', () => {
+            $('#list-hdf').children().remove()})
+        }
+
+        function doubleDamageFrom(info){
+             let dDF = []
+                for (let types of info.damage_relations.double_damage_from) {
+                    dDF.push(types.name)
+                }
+                console.log(dDF)
+                if (dDF.length > 0){
+                    dDF.forEach((name) => {
+                        const $list = $('<li class="ddfl">')
+                        $list.text(name)
+                        $list.appendTo('#list-ddf')
+                        console.log(name)
+                    })
+                }else{
+                    console.log(`Theres nothing here`)
+                    $('#list-ddf').html('<img class="placeholder-pics" src="../images/pokeball2.png">')
+                }
+                $button.on('click', () => {
+            $('#list-ddf').children().remove()})
+        }
+
+        function noDamageTo(info){
+             let nDT = []
+                for (let types of info.damage_relations.no_damage_to) {
+                    nDT.push(types.name)
+                }
+                console.log(nDT)
+                if (nDT.length > 0){
+                    nDT.forEach((name) => {
+                        const $list = $('<li class="ndtl">')
+                        $list.text(name)
+                        $list.appendTo('#list-ndt')
+                        console.log(name)
+                    })
+                }else{
+                    console.log(`Theres nothing here`)
+                    $('#list-ndt').html('<img class="placeholder-pics" src="../images/pokeball2.png">')
+                }
+                $button.on('click', () => {
+            $('#list-ndt').children().remove()})
+        }
+
+        function halfDamageTo(info){
+             let hDT = []
+                for (let types of info.damage_relations.half_damage_to) {
+                    hDT.push(types.name)
+                }
+                console.log(hDT)
+                if (hDT.length > 0){
+                    hDT.forEach((name) => {
+                        const $list = $('<li class="hdtl">')
+                        $list.text(name)
+                        $list.appendTo('#list-hdt')
+                        console.log(name)
+                    })
+                }else{
+                    console.log(`Theres nothing here`)
+                    $('#list-hdt').html('<img class="placeholder-pics" src="../images/pokeball2.png">')
+                }
+                $button.on('click', () => {
+            $('#list-hdt').children().remove()})
+        }
     }) 
 })
 
