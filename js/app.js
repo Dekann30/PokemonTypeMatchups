@@ -2,8 +2,8 @@ const $userInput = $('input')
 const $button = $('#get-results')
 
 $button.on('click', () => {
-    let pokemon = $userInput.val().toLowerCase()
-    $.ajax(`https://pokeapi.co/api/v2/pokemon/${pokemon}/`).then((data) => {
+    let pokemonOrType = $userInput.val().toLowerCase()
+    $.ajax(`https://pokeapi.co/api/v2/pokemon/${pokemonOrType}/`).then((data) => {
         const $pokemonName = $(`<h2 id='pokemon-name'>${$userInput.val()}</h2>`)
         $pokemonName.appendTo('#search-results')
 
@@ -53,8 +53,25 @@ $button.on('click', () => {
                 halfDamageTo(data3)
             })
         }
-        
-        function doubleDamageTo(info){
+
+    }).catch(() => {
+        $.ajax(`https://pokeapi.co/api/v2/type/${pokemonOrType}/`).then((data4) => {
+            const $typeName = $(`<h2 id='type-name'>${$userInput.val()}</h2>`)
+        $typeName.appendTo('#search-results')
+
+        $button.on('click', () => {
+            $('#search-results').children().remove()})
+
+            doubleDamageTo(data4)
+            noDamageFrom(data4)
+            halfDamageFrom(data4)
+            doubleDamageFrom(data4)
+            noDamageTo(data4)
+            halfDamageTo(data4)
+        })
+    }) 
+
+    function doubleDamageTo(info){
             let dDT = []
                 for (let types of info.damage_relations.double_damage_to) {
                     dDT.push(types.name)
@@ -72,7 +89,7 @@ $button.on('click', () => {
             $('#list-ddt').children().remove()})
         }
 
-        function noDamageFrom(info){
+    function noDamageFrom(info){
              let nDF = []
                 for (let types of info.damage_relations.no_damage_from) {
                     nDF.push(types.name)
@@ -161,7 +178,6 @@ $button.on('click', () => {
                 $button.on('click', () => {
             $('#list-hdt').children().remove()})
         }
-    }) 
 })
 
 //need a for of loop to iterate over data.types
