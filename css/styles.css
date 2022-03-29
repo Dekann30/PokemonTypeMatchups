@@ -5,21 +5,18 @@ main {
 
 .main-columns{
    
-    height: 550px;
-    width: 100%;
+    height: 465px;
+    width: 330px;
 }
 
-.main-columns.one{
+.main-columns.one {
     background-color: red;
     }
 
-.main-columns.two{
+.main-columns.two, .main-columns.three, .main-columns.four{
     background-color: blue;
+    width: 300px;
     }
-
-.main-columns.three {
-    background-color: yellow;
-}
 
 #searchbox-and-button{
     border-style: solid;
@@ -27,18 +24,25 @@ main {
 
 #search-results{
     border-style: solid;
-    width: 350px;
-    height: 200px;
-    margin: auto;
 }
 
 .subtitles {
-    height: 30px;
+    height: 460px;
+    width: 30px;
     border-style: solid;
 }
 
+.subboxes {
+    height: 225px;
+    border-style: solid;
+    writing-mode: vertical-rl;
+    transform: rotate(180deg);
+    width: 25px;
+ 
+}
+
 .boxes {
-    height: 250px;
+    height: 227px;
     border-style: solid;
 }
 
@@ -49,9 +53,10 @@ main {
 
 .list-boxes{
     border-style: solid;
-    width: 350px;
-    height: 200px;
+    width: 200px;
+    height: 150px;
     margin: auto;
+    margin-top: 15px;
 }
 
 #pokemon-picture{

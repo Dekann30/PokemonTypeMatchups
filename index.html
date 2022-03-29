@@ -11,12 +11,11 @@
 </head>
 <body>
     <header>
-        <h1></h1>
+        <h1>Pokemon Type Matchups</h1>
     </header>
     <nav></nav>
     <main>
         <div class="main-columns one">
-            <div class="subtitles sone"></div>
             <div class="boxes" id="search-and-results">
                 <div id="searchbox-and-button">
                     <input type="text" placeholder="Pokemon or Move Type" value="vulpix" />
@@ -28,28 +27,40 @@
                 <!-- links for advatages or placeholder image  -->
             </div>
         </div>
+        <div class="subtitles sone">
+            <div class="subboxes">Strengths</div>
+            <div class="subboxes">Weaknesses</div>
+        </div>
 
         <div class="main-columns two">
-            <div class="subtitles stwo"></div>
-            <div class="boxes" id="strong-against">
-                <div class="sub-subtitles ssone"></div>
-                <ul class="list-boxes" id="list-SA"></ul>
+            <div class="boxes" id="ddt">
+                <div class="sub-subtitles ssone">Double Damage To:</div>
+                <ul class="list-boxes" id="list-ddt"></ul>
             </div>
-            <div class="boxes" id="no-effect-from">
-                <div class="sub-subtitles sstwo"></div>
-                <ul class="list-boxes" id="list-NEF"></ul>
+            <div class="boxes" id="ddf">
+                <div class="sub-subtitles sstwo">Double Damage From:</div>
+                <ul class="list-boxes" id="list-ddf"></ul>
             </div>
         </div>
 
         <div class="main-columns three">
-            <div class="subtitles sthree"></div>
-            <div class="boxes" id="weak-against">
-                <div class="sub-subtitles ssthree"></div>
-                <ul class="list-boxes" id="list-WA"></ul>
+            <div class="boxes" id="ndf">
+                <div class="sub-subtitles ssthree">No Damage From:</div>
+                <ul class="list-boxes" id="list-ndf"></ul>
             </div>
-            <div class="boxes" id="double-damage-from">
-                <div class="sub-subtitles ssfour"></div>
-                <ul class="list-boxes" id="list-DDF"></ul>
+            <div class="boxes" id="ndt">
+                <div class="sub-subtitles ssfour">No Damage To:</div>
+                <ul class="list-boxes" id="list-ndt"></ul>
+            </div>
+        </div>
+        <div class="main-columns four">
+            <div class="boxes" id="hdf">
+                <div class="sub-subtitles ssfive">Half Damage From:</div>
+                <ul class="list-boxes" id="list-hdf"></ul>
+            </div>
+            <div class="boxes" id="hdt">
+                <div class="sub-subtitles sssix">Half Damage To:</div>
+                <ul class="list-boxes" id="list-hdt"></ul>
             </div>
         </div>
     </main>

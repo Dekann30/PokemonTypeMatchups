@@ -4,7 +4,6 @@ const $button = $('#get-results')
 $button.on('click', () => {
     let pokemon = $userInput.val().toLowerCase()
     $.ajax(`https://pokeapi.co/api/v2/pokemon/${pokemon}/`).then((data) => {
-        console.log()
         const $pokemonName = $(`<h2 id='pokemon-name'>${$userInput.val()}</h2>`)
         $pokemonName.appendTo('#search-results')
 
@@ -29,14 +28,6 @@ $button.on('click', () => {
         if (pokemonType.length === 1){
             $.ajax(`https://pokeapi.co/api/v2/type/${pokemonType}/`).then((data2) => {
                 console.log(data2)
-                // let strongAgainst = data2.damage_relations.double_damage_to[0].name
-                // console.log(strongAgainst)
-
-                // let SA = []
-                // for (let test of data2.damage_relations.double_damage_to) {
-                //     SA.push(test.name)
-                // }
-                // console.log(SA)
                 doubleDamageTo(data2)
             })
 
@@ -59,10 +50,9 @@ $button.on('click', () => {
                 dDT.forEach((name) => {
                     const $list = $('<li class="ddtl">')
                     $list.text(name)
-                    $list.appendTo('#list-SA')
+                    $list.appendTo('#list-ddt')
                     console.log(name)
                 })
-                // $('#strong-against').text(dDT)
         }
 
     }) 
