@@ -75,12 +75,17 @@ input {
     margin: 10px;
 }
 
-#pokemon-picture{
-    height: 220px;
+#pokemon-name {
+    margin-bottom: 15px;
+    margin-top: 0px;
+    font-size: 40px;
+    color: white;
+    text-shadow: 1px 1px blue;
+    text-transform: capitalize;
 }
 
-#pokemon-results-icon.type-icon{
-    height: 32px;
+#pokemon-picture{
+    height: 220px;
 }
 
 .subtitles {
