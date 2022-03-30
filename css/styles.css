@@ -60,17 +60,6 @@ input {
     border-color: red;
 }
 
-.dropdown{
-    background-color: white;
-    color: white;
-    height: 400px;
-    width: 300px;
-}
-
-.ui-autocomplete-input{
-    background-color: white;
-}
-
 #get-results{
     margin-left: 15px;
     background-color: white;
@@ -137,7 +126,6 @@ input {
 }
 
 .list-boxes{
-    /* border-style: solid; */
     width: 250px;
     height: 155px;
     margin: auto;
@@ -173,4 +161,19 @@ input {
 
 .placeholder-pics{
     height: 150px;
+}
+
+#ui-id-1{
+    display:flex;
+    flex-direction: column;
+    width: 110px;
+    justify-content: left;
+    align-items: left;
+    background-color: rgba(192, 215, 236, 0.692);
+    color: black;
+    list-style-type: none;
+    margin:0px;
+    padding: 5px;
+    border-style: solid;
+    border-color: lightblue;
 }
