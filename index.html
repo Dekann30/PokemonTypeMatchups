@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/styles.css"/>
     <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/ui/1.13.1/jquery-ui.js"></script>
     <script defer src="/js/app.js"></script>
     <title>Pokemon Type Matchup</title>
 </head>
@@ -15,12 +16,9 @@
     </header>
     <main>
         <div class="main-columns one">
-            <div class="boxes" id="search-and-results">
+            <div class="boxes autocomplete" id="search-and-results">
                 <form id="searchbox-and-button">
                     <input type="text" id='user-input' placeholder="Pokemon or Move Type"/>
-                    <div class="dropdown">
-                       <ul class="dropdown-content"></ul> 
-                    </div>
                     <button id="get-results">Get Effectiveness</button>
                 </form>
                 <div id="search-results"></div>

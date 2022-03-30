@@ -1,22 +1,17 @@
 const $userInput = $('input')
 const $button = $('#get-results')
 
-const PokemonNameArr = []
-$.ajax(`https://pokeapi.co/api/v2/pokemon?offset=0&limit=1126`).then((pokemonName) => {
+$( function() {
+    const PokemonNameArr = []
+    $.ajax(`https://pokeapi.co/api/v2/pokemon?offset=0&limit=1126`).then((pokemonName) => {
     for (let pName of pokemonName.results){
         PokemonNameArr.push(pName.name)
     } 
-})
-
-$userInput.on('input', (event) => {
-    let search = event.target.value
-    let match = PokemonNameArr.filter(element =>{
-        if (element.includes(search))
-        return true
-    })    
-console.log(match)
-    match.forEach((item) => {
-        $('.dropdown-content').text(item)
+    })
+    $('#user-input').autocomplete({
+        source: PokemonNameArr,
+        class: ".dropdown",
+        appendTo:'test',
     })
 })
 
@@ -83,8 +78,11 @@ $button.on('click', (event) => {
     })
     
     $.ajax(`https://pokeapi.co/api/v2/type/${pokemonOrType}/`).then((data4) => {
-        const $typeName = $(`<img class='type-icon' id='pokemon-results-icon' src='../images/wordIcons/${pokemonOrType}.png'>`)
+        const $typeName = $(`<div id='solo-icon'><img class='type-icon' id='pokemon-results-icon' src='../images/wordIcons/${pokemonOrType}.png'></div>`)
     $typeName.appendTo('#search-results')
+
+    $('.list-boxes').css('background-color', 'rgba(192, 215, 236, 0.692)')
+    $('#solo-icon').css('background-color', 'rgba(45, 154, 94, 0.77)')
 
     $button.on('click', () => {
         $('#search-results').children().remove()})
@@ -111,7 +109,7 @@ $button.on('click', (event) => {
                         $list.appendTo('#list-ddt')
                     })
                 }else{
-                    $('#list-ndf').html('<img class="placeholder-pics" src="../images/pokeball2.png">')
+                    $('#list-ddt').html('<img class="placeholder-pics" src="../images/pokeball2.png">')
                 }
                 $button.on('click', () => {
             $('#list-ddt').children().remove()})
@@ -216,16 +214,16 @@ $button.on('click', (event) => {
                 $button.on('click', () => {
             $('#list-hdt').children().remove()})
         }
-        function noDamage(types){
-            let noDamageTo = []
-            let noDamageFrom = []
-            types.forEach((type) =>{
-                //push into the two arrays
-            })
-            if (noDamageTo.length > 0){
+        // function noDamage(types){
+        //     let noDamageTo = []
+        //     let noDamageFrom = []
+        //     types.forEach((type) =>{
+        //         //push into the two arrays
+        //     })
+        //     if (noDamageTo.length > 0){
 
-            }else{
-                //pokeball
-            }
-        }   
+        //     }else{
+        //         //pokeball
+        //     }
+        // }   
 })

@@ -61,19 +61,14 @@ input {
 }
 
 .dropdown{
-    display: flex;
-    position: relative;
+    background-color: white;
+    color: white;
+    height: 400px;
+    width: 300px;
 }
 
-.dropdown-content {
-    display: none;
-    position: absolute;
-    width: 100%;
-    overflow: auto;
-}
-
-.dropdown:focus .dropdown-content{
-    display:flex
+.ui-autocomplete-input{
+    background-color: white;
 }
 
 #get-results{
@@ -154,7 +149,22 @@ input {
     justify-content: top;
     align-items: center;
     padding: 0px;
-    background-color: rgba(238, 220, 220, 0.616);
+}
+
+#solo-icon{
+    height: 150px;
+    width: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 70px;
+}
+
+#pokemon-results-icon.type-icon{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .type-icon {
