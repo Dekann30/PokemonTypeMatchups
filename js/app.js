@@ -17,6 +17,9 @@ $( function() {
 
 $button.on('click', (event) => {
     event.preventDefault()
+
+    $('.ui-helper-hidden-accessible').children().remove()
+
     $('#sbone').text('Strengths')
     $('#sbtwo').text('Weaknesses')
 
