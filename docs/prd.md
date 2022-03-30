@@ -22,11 +22,11 @@ List of stories users should experience when using your application.
 MVP
 - Users can search for a pokemon or typing
 - Users can see all the effectiveness ratings for entered type or types of the enter pokemon
-Stretch
+<!-- Stretch
 - Users can click on a list of typings to search 
 - Users can click on returned typings from a search to trigger a new search 
 - Users can click on a link to see a list of Pokemon with that typing
-- Users can click on a link to see a list of moves with that typing
+- Users can click on a link to see a list of moves with that typing -->
 
 ## User Interface Mockups
 

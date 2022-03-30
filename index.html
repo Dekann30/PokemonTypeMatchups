@@ -16,10 +16,13 @@
     <main>
         <div class="main-columns one">
             <div class="boxes" id="search-and-results">
-                <div id="searchbox-and-button">
-                    <input type="text" placeholder="Pokemon or Move Type" value="bug" />
+                <form id="searchbox-and-button">
+                    <input type="text" id='user-input' placeholder="Pokemon or Move Type"/>
+                    <div class="dropdown">
+                       <ul class="dropdown-content"></ul> 
+                    </div>
                     <button id="get-results">Get Effectiveness</button>
-                </div>
+                </form>
                 <div id="search-results"></div>
             </div>
         </div>

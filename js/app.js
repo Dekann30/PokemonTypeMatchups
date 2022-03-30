@@ -1,7 +1,27 @@
 const $userInput = $('input')
 const $button = $('#get-results')
 
-$button.on('click', () => {
+const PokemonNameArr = []
+$.ajax(`https://pokeapi.co/api/v2/pokemon?offset=0&limit=1126`).then((pokemonName) => {
+    for (let pName of pokemonName.results){
+        PokemonNameArr.push(pName.name)
+    } 
+})
+
+$userInput.on('input', (event) => {
+    let search = event.target.value
+    let match = PokemonNameArr.filter(element =>{
+        if (element.includes(search))
+        return true
+    })    
+console.log(match)
+    match.forEach((item) => {
+        $('.dropdown-content').text(item)
+    })
+})
+
+$button.on('click', (event) => {
+    event.preventDefault()
     $('#sbone').text('Strengths')
     $('#sbtwo').text('Weaknesses')
 
@@ -40,6 +60,7 @@ $button.on('click', () => {
             })
 
         } else {
+            noDamage(pokemonType)
              $.ajax(`https://pokeapi.co/api/v2/type/${pokemonType[0]}/`).then((data2) => {
                 doubleDamageTo(data2)
                 noDamageFrom(data2)
@@ -195,4 +216,16 @@ $button.on('click', () => {
                 $button.on('click', () => {
             $('#list-hdt').children().remove()})
         }
+        function noDamage(types){
+            let noDamageTo = []
+            let noDamageFrom = []
+            types.forEach((type) =>{
+                //push into the two arrays
+            })
+            if (noDamageTo.length > 0){
+
+            }else{
+                //pokeball
+            }
+        }   
 })
