@@ -22,10 +22,10 @@ Created from personal desire to use the app to for easy reference during the tim
 
 ---
 
-![On Load](../PokemonTypeMatchups/images/onload.png)
-![Searching](../PokemonTypeMatchups/images/Searching%20for%20a%20Pokemon.png)
-![Pokemon Results](../PokemonTypeMatchups/images/pokemonresults.png)
-![Type Results](../PokemonTypeMatchups/images/typeresults.png)
+![On Load](./images/onload.png)
+![Searching](./images/Searching%20for%20a%20Pokemon.png)
+![Pokemon Results](./images/pokemonresults.png)
+![Type Results](./images/typeresults.png)
 
 
 ### Getting Started
