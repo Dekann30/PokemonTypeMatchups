@@ -58,7 +58,7 @@ $button.on('click', (event) => {
             })
 
         } else {
-            noDamage(pokemonType)
+            (pokemonType)
              $.ajax(`https://pokeapi.co/api/v2/type/${pokemonType[0]}/`).then((data2) => {
                 doubleDamageTo(data2)
                 noDamageFrom(data2)
@@ -216,17 +216,5 @@ $button.on('click', (event) => {
                 }
                 $button.on('click', () => {
             $('#list-hdt').children().remove()})
-        }
-        // function noDamage(types){
-        //     let noDamageTo = []
-        //     let noDamageFrom = []
-        //     types.forEach((type) =>{
-        //         //push into the two arrays
-        //     })
-        //     if (noDamageTo.length > 0){
-
-        //     }else{
-        //         //pokeball
-        //     }
-        // }   
+        } 
 })

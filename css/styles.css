@@ -1,6 +1,6 @@
 body{
     background-image: url(../images/bodybackground.jpg);
-    background-size: 1100px 750px;
+    background-size: 100%;
     margin-left: 40px;
     margin-top: 20px;
 }
@@ -8,7 +8,7 @@ body{
 header{
     background-image: url(../images/banner2.jpg);
     background-repeat: no-repeat;
-    background-size: 1260px 155px;
+    background-size: 100% 155px;
     display: flex;
     justify-content: center;
     resize: none;
