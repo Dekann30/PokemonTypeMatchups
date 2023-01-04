@@ -32,7 +32,7 @@ Created from personal desire to use the app to for easy reference during the tim
 
 ---
 
-[Pokemon Type Matchup](https://jazzy-donut-9455c5.netlify.app/)
+[Pokemon Type Matchup](https://pokemon-type-matchup.netlify.app/)
 
 
 ### Future Enhancements
