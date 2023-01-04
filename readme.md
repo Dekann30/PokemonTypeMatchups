@@ -2,8 +2,10 @@
 
 ---
 
-An app that populates type effectiveness based on pokemon or type<br>
-Created from personal desire to use the app to for easy reference during the times I play Pokemon
+[Pokemon Type Matchup](https://jazzy-donut-9455c5.netlify.app/)
+
+An application that populates type effectiveness based on user entered pokemon or type<br>
+Created from personal desire to use the app to for easy reference during the times I play any game in the Pokemon franchise 
 
 
 ## Technologies Used
@@ -27,12 +29,6 @@ Created from personal desire to use the app to for easy reference during the tim
 ![Pokemon Results](./images/pokemonresults.png)
 ![Type Results](./images/typeresults.png)
 
-
-### Getting Started
-
----
-
-[Pokemon Type Matchup](https://pokemon-type-matchup.netlify.app/)
 
 
 ### Future Enhancements
